@@ -6,15 +6,16 @@ class A:
 if __name__ == '__main__':
     a = A()
     print(f"{a.x = }, {a.y = }, {a.z = }")
+    # a.x = 100, a.y = 200, a.z = 300
     a.x = -1
     a.y = -2
     a.z = -3
     print(f"{a.x = }, {a.y = }, {a.z = }")
+    # a.x = -1, a.y = -2, a.z = -3
 
 """
 // C++ automatically initializes from defaults
 #include <iostream>
-#include <string>
 
 class A {
     public:
