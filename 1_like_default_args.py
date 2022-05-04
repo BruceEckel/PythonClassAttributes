@@ -3,7 +3,6 @@ class A:
     y = 200
     z = 300
 
-
 if __name__ == '__main__':
     a = A()
     print(f"{a.x = }, {a.y = }, {a.z = }")
@@ -24,7 +23,6 @@ class A {
     int z = 300;
 };
 
-
 int main() {
     A a = A();
     std::cout << a.x << ", " << a.y << ", " << a.z << std::endl;
@@ -32,6 +30,34 @@ int main() {
     a.y = -2;
     a.z = -3;
     std::cout << a.x << ", " << a.y << ", " << a.z << std::endl;
+}
+/*
+100, 200, 300
+-1, -2, -3
+*/
+"""
+
+"""
+// Java automatically initializes from defaults
+
+class A {
+    int x = 100;
+    int y = 200;
+    int z = 300;
+    @Override public String toString() {
+        return x + ", " + y + ", " + z;
+    }
+}
+
+public class DefaultValues {
+    public static void main(String []args){
+        A a = new A();
+        System.out.println(a);
+        a.x = -1;
+        a.y = -2;
+        a.z = -3;
+        System.out.println(a);
+    }
 }
 /*
 100, 200, 300
