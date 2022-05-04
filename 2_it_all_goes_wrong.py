@@ -7,7 +7,7 @@ class A:
 if __name__ == '__main__':
     a = A()
     print(f"{a.x = }, {a.y = }, {a.z = }")
-    a.x = "zip"
-    a.y = "zop"
-    a.z = "zap"
+    a.x = -1
+    a.y = -2
+    a.z = -3
     print(f"{a.x = }, {a.y = }, {a.z = }")
