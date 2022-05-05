@@ -1,3 +1,5 @@
+# look_inside.py
+
 def attributes(d):
     return ", ".join(
         [f"{k}: {v}" for k, v in vars(d).items()

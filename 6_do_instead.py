@@ -26,9 +26,27 @@ if __name__ == '__main__':
     aa = AA()
     print(aa)
     show_object(AA, aa, "aa")
+    aa.x = -1
+    aa.y = -2
+    aa.z = -3
+    show_object(AA, aa, "aa")
     aa = AA(-1, -2, -3)
     show_object(AA, aa, "aa")
 
 """
-
+# [Class A] Empty
+# [Object a] x: 100, y: 200, z: 300
+# 
+# [Class A] Empty
+# [Object a] x: -1, y: -2, z: -3
+# 
+# AA(x=100, y=200, z=300)
+# [Class AA] x: 100, y: 200, z: 300
+# [Object aa] x: 100, y: 200, z: 300
+# 
+# [Class AA] x: 100, y: 200, z: 300
+# [Object aa] x: -1, y: -2, z: -3
+# 
+# [Class AA] x: 100, y: 200, z: 300
+# [Object aa] x: -1, y: -2, z: -3
 """
