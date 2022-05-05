@@ -1,4 +1,4 @@
-from look_inside import show_object
+from look_inside import show
 from dataclasses import dataclass
 
 class A:
@@ -17,21 +17,21 @@ class AA:
 
 if __name__ == '__main__':
     a = A()
-    show_object(A, a, "a")
+    show(A, a, "a")
     a.x = -1
     a.y = -2
     a.z = -3
-    show_object(A, a, "a")
+    show(A, a, "a")
 
     aa = AA()
     print(aa)
-    show_object(AA, aa, "aa")
+    show(AA, aa, "aa")
     aa.x = -1
     aa.y = -2
     aa.z = -3
-    show_object(AA, aa, "aa")
+    show(AA, aa, "aa")
     aa = AA(-1, -2, -3)
-    show_object(AA, aa, "aa")
+    show(AA, aa, "aa")
 
 """
 # [Class A] Empty
