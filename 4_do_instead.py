@@ -11,18 +11,24 @@ class A:
 
 @dataclass
 class AA:
-    x = 100
-    y = 200
-    z = 300
+    x: int = 100
+    y: int = 200
+    z: int = 300
 
 if __name__ == '__main__':
     a = A()
     show_object(A, a, "a")
-    # [Class A] x: 100, y: 200, z: 300
-    # [Object a] Empty
     a.x = -1
     a.y = -2
     a.z = -3
     show_object(A, a, "a")
-    # [Class A] x: 100, y: 200, z: 300
-    # [Object a] x: -1, y: -2, z: -3
+
+    aa = AA()
+    print(aa)
+    show_object(AA, aa, "aa")
+    aa = AA(-1, -2, -3)
+    show_object(AA, aa, "aa")
+
+"""
+
+"""
