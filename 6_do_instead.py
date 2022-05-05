@@ -33,6 +33,14 @@ if __name__ == '__main__':
     aa = AA(-1, -2, -3)
     show(AA, aa, "aa")
 
+    # Even if we modify the class attributes, the
+    # constructor default arguments stay the same:
+    AA.x = 42
+    AA.y = 74
+    AA.z = 22
+    aa2 = AA()
+    show(AA, aa2, "aa2")
+
 """
 # [Class A] Empty
 # [Object a] x: 100, y: 200, z: 300
@@ -49,4 +57,7 @@ if __name__ == '__main__':
 # 
 # [Class AA] x: 100, y: 200, z: 300
 # [Object aa] x: -1, y: -2, z: -3
+# 
+# [Class AA] x: 42, y: 74, z: 22
+# [Object aa2] x: 100, y: 200, z: 300
 """
