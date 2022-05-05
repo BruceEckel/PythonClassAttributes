@@ -32,4 +32,6 @@ if __name__ == '__main__':
 Just like Java and C++,
 If an object attribute doesn't exist, Python looks for a class
 attribute of the same name.
+Unlike Java and C++, Python allows you to shadow the class attribute
+name with an identical object attribute name.
 """

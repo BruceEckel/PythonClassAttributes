@@ -2,30 +2,26 @@
 // Java automatically initializes from defaults
 class A {
     int x = 100;
-    int y = 200;
-    int z = 300;
     public A() {
-        // x, y, and z are already initialized:
+        // x is already initialized:
         System.out.println("In A constructor: " + this);
     }
     @Override
     public String toString() {
-        return x + ", " + y + ", " + z;
+        return "x = " + x;
     }
 }
 
 class B {
     static int x = 100;
-    static int y = 200;
-    static int z = 300;
     @Override
     public String toString() {
-        // Accessing statics via instance:
-        return x + ", " + y + ", " + z;
-        // (Same as this.x, this.y, this.z)
+        // Accessing static via instance:
+        return "x = " + x;
+        // Same as Integer.toString(this.x)
     }
     static public String statics() {
-        return "B.statics(): " + B.x + ", " + B.y + ", " + B.z;
+        return "B.statics(): B.x = " + B.x;
     }
 }
 
@@ -40,17 +36,13 @@ public class DefaultValues {
         A a = new A();
         System.out.println("a: " + a);
         a.x = -1;
-        a.y = -2;
-        a.z = -3;
         System.out.println("a: " + a);
 
         B b = new B();
         System.out.println("b: " + b);
         System.out.println(B.statics());
-        // Accessing statics via instance:
+        // Accessing static via instance:
         b.x = -1;
-        b.y = -2;
-        b.z = -3;
         System.out.println("b: " + b);
         System.out.println(B.statics());
         B b2 = new B();
@@ -58,12 +50,12 @@ public class DefaultValues {
     }
 }
 /*
-In A constructor: 100, 200, 300
-a: 100, 200, 300
-a: -1, -2, -3
-b: 100, 200, 300
-B.statics(): 100, 200, 300
-b: -1, -2, -3
-B.statics(): -1, -2, -3
-b2: -1, -2, -3
+In A constructor: x = 100
+a: x = 100
+a: x = -1
+b: x = 100
+B.statics(): B.x = 100
+b: x = -1
+B.statics(): B.x = -1
+b2: x = -1
 */

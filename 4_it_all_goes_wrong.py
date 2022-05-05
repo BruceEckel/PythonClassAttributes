@@ -19,7 +19,7 @@ if __name__ == '__main__':
     b.a.y = 22
     print(f"{b.a.x = }, {b.a.y = }")
     # b.a.x = 100, b.a.y = 22
-    oops() # Has no reference to object 'b'
+    oops()  # Has no reference to object 'b'
     print(f"{b.a.x = }, {b.a.y = }")
     # b.a.x = 999999, b.a.y = 22
     print(f"{a.x = }, {a.y = }")
