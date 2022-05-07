@@ -1,5 +1,6 @@
 // DefaultValues.java
 // Java automatically initializes from defaults
+
 class A {
     int x = 100;
     public A() {
@@ -34,28 +35,26 @@ class C {
 public class DefaultValues {
     public static void main(String[] args) {
         A a = new A();
+        // In A constructor: x = 100
         System.out.println("a: " + a);
+        // a: x = 100
         a.x = -1;
         System.out.println("a: " + a);
+        // a: x = -1
 
         B b = new B();
         System.out.println("b: " + b);
+        // b: x = 100
         System.out.println(B.statics());
+        // B.statics(): B.x = 100
         // Accessing static via instance:
         b.x = -1;
         System.out.println("b: " + b);
+        // b: x = -1
         System.out.println(B.statics());
+        // B.statics(): B.x = -1
         B b2 = new B();
         System.out.println("b2: " + b2);
+        // b2: x = -1
     }
 }
-/*
-In A constructor: x = 100
-a: x = 100
-a: x = -1
-b: x = 100
-B.statics(): B.x = 100
-b: x = -1
-B.statics(): B.x = -1
-b2: x = -1
-*/

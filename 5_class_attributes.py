@@ -8,7 +8,7 @@ class A:
 class B:
     x = 100
     def __init__(self, x_init: int):
-        # You CAN shadow class attribute name:
+        # You CAN shadow a class attribute name:
         self.x = x_init
 
 if __name__ == '__main__':
