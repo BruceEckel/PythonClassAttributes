@@ -1,8 +1,9 @@
+# 6_do_instead.py
 from look_inside import show
 from dataclasses import dataclass
 
 class A:
-    def __init__(self, x = 100, y = 200, z = 300):
+    def __init__(self, x: int = 100, y: int = 200, z: int = 300):
         self.x = x
         self.y = y
         self.z = z

@@ -1,4 +1,4 @@
-// 2_default_values.cpp
+// 3_default_values.cpp
 // C++ automatically initializes from defaults
 // Tested on http://cpp.sh
 #include <iostream>
@@ -25,13 +25,8 @@ int B::x = 100;
 class C {
     public:
     static const int x = 100;
-};
-
-class D {
-    public:
-    static const int x = 100;
     // Cannot shadow identifier name:
-    // int x = 1; // 'int D::x' conflicts with a previous declaration
+    // int x = 1; // 'int C::x' conflicts with a previous declaration
 };
 
 int main() {

@@ -1,9 +1,11 @@
+# 4_it_all_goes_wrong.py
+
 class A:
-    x = 100
-    y = 200
+    x: int = 100
+    y: int = 200
 
 class B:
-    a = A()
+    a: A = A()
 
 def oops(): A.x = 999999
 

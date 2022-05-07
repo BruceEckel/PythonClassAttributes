@@ -1,12 +1,13 @@
+# 5_class_attributes.py
 from look_inside import show
 
 class A:
-    x = 100
-    y = 200
-    z = 300
+    x: int = 100
+    y: int = 200
+    z: int = 300
 
 class B:
-    x = 100
+    x: int = 100
     def __init__(self, x_init: int):
         # You CAN shadow a class attribute name:
         self.x = x_init
