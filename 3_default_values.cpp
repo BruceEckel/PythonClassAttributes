@@ -14,6 +14,9 @@ class A {
 class B {
     public:
     static int x;
+    B() { // x has been initialized:
+        std::cout << "constructor: " << x << std::endl;
+    }
     // Cannot shadow identifier name:
     // int x = 1;
     // 'int B::x' conflicts with a previous declaration
@@ -38,6 +41,7 @@ int main() {
     // -1
 
     B b;
+    // constructor: 100
     std::cout << b.x << std::endl;
     // 100
     // Accessing static via instance:
