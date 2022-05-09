@@ -12,3 +12,4 @@ if __name__ == '__main__':
     # a.x = -1
     a2 = A()
     print(f"{a2.x = }")
+    # a2.x = 100

@@ -1,3 +1,4 @@
+// 2_DefaultValues.java
 // Rename to DefaultValues.java
 // Java automatically initializes from defaults
 
@@ -25,7 +26,8 @@ class B {
     return "B.statics(): B.x = " + B.x;
   }
   // Cannot shadow identifier names:
-  // int x = -1; // Variable 'x' is already defined in the scope
+  // int x = -1;
+  // Variable 'x' is already defined in the scope
 }
 
 public class DefaultValues {
@@ -37,6 +39,9 @@ public class DefaultValues {
     a.x = -1;
     System.out.println("a: " + a);
     // a: x = -1
+    // In A constructor: x = 100
+    System.out.println("new A(): " + new A());
+    // new A(): x = 100
 
     B b = new B();
     System.out.println("b: " + b);
