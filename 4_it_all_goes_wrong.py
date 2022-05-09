@@ -17,6 +17,9 @@ if __name__ == '__main__':
     a.y = -2
     print(f"{a.x = }, {a.y = }")
     # a.x = -1, a.y = -2
+    print(f"{A.x = }, {A.y = }")
+    # A.x = 100, A.y = 200
+
     b = B()
     b.a.y = 22
     print(f"{b.a.x = }, {b.a.y = }")
