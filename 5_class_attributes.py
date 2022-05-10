@@ -24,4 +24,3 @@ if __name__ == '__main__':
     show(b, "b")
     # [Class B] x: 100
     # [Object b] x: -99
-
