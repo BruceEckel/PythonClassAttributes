@@ -1,4 +1,4 @@
-# 6_do_instead.py
+# 7_choices.py
 from look_inside import show
 from dataclasses import dataclass
 
@@ -40,10 +40,10 @@ if __name__ == '__main__':
     show(AA, aa, "aa")
     # [Class AA] x: 100, y: 200, z: 300
     # [Object aa] x: -1, y: -2, z: -3
-    aa2 = AA(-1, -2, -3)
+    aa2 = AA(-4, -5, -6)
     show(AA, aa2, "aa2")
     # [Class AA] x: 100, y: 200, z: 300
-    # [Object aa2] x: -1, y: -2, z: -3
+    # [Object aa2] x: -4, y: -5, z: -6
 
     # Even if we modify the class attributes, the
     # constructor default arguments stay the same:

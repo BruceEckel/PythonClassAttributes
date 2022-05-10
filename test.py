@@ -7,6 +7,12 @@ class Frob:
     snick: int
     snack: float
 
+class Creation:
+    def __str__(self):
+        return f"{hasattr(self, 'x')}"
+    def create(self):
+        self.x = 96
+
 if __name__ == '__main__':
     f = Frob(True, 1, 3.14159)
     print("dir(f) = ")
@@ -18,3 +24,10 @@ if __name__ == '__main__':
     pprint(dir(Frob))
     print("vars(Frob) = ")
     pprint(vars(Frob))
+
+    print("Testing creation")
+    c = Creation()
+    print(c)
+    c.create()
+    print(c)
+    print("done")

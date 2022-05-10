@@ -7,7 +7,8 @@ class A:
 class B:
     a: A = A()
 
-def oops(): A.x = 999999
+def oops():  A.x = 999999
+def reset(): A.x = 100
 
 if __name__ == '__main__':
     a = A()
@@ -19,6 +20,15 @@ if __name__ == '__main__':
     # a.x = -1, a.y = -2
     print(f"{A.x = }, {A.y = }")
     # A.x = 100, A.y = 200
+    oops()
+    a2 = A()
+    print(f"{a2.x = }, {a2.y = }")
+    # a2.x = 999999, a2.y = 200
+    reset()
+    print(f"{a2.x = }, {a2.y = }")
+    # a2.x = 100, a2.y = 200
+    print(f"{a.x = }, {a.y = }")
+    # a.x = -1, a.y = -2
 
     b = B()
     b.a.y = 22
