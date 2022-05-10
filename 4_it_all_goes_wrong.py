@@ -26,11 +26,11 @@ if __name__ == '__main__':
 
     a1 = A()
     display()
-    # a.x = 100, a.y = 200
+    # a1.x = 100, a1.y = 200
     a1.x = -1
     a1.y = -2
     display()
-    # a.x = -1, a.y = -2
+    # a1.x = -1, a1.y = -2
     a2 = A()
     display()
     # a1.x = -1, a1.y = -2
