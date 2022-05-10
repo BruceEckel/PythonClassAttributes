@@ -6,19 +6,19 @@ class A:
 
 if __name__ == '__main__':
     a = A()
-    show(A, a, "a")
+    show(a, "a")
     # [Class A] x: 100
     # [Object a] Empty
     print(f"{a.x = }")
     # a.x = 100
     a.x = -1
-    show(A, a, "a")
+    show(a, "a")
     # [Class A] x: 100
     # [Object a] x: -1
     print(f"{a.x = }")
     # a.x = -1
     a2 = A()
-    show(A, a2, "a2")
+    show(a2, "a2")
     # [Class A] x: 100
     # [Object a] Empty
     print(f"{a2.x = }")

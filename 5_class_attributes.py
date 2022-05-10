@@ -12,16 +12,16 @@ class B:
 
 if __name__ == '__main__':
     a = A()
-    show(A, a, "a")
+    show(a, "a")
     # [Class A] x: 100
     # [Object a] Empty
     a.x = 1
-    show(A, a, "a")
+    show(a, "a")
     # [Class A] x: 100
     # [Object a] x: 1
 
     b = B(-99)
-    show(B, b, "b")
+    show(b, "b")
     # [Class B] x: 100
     # [Object b] x: -99
 
