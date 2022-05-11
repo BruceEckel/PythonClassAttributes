@@ -39,8 +39,8 @@ public class DefaultValues {
     a.x = -1;
     System.out.println("a: " + a);
     // a: x = -1
-    // In A constructor: x = 100
     System.out.println("new A(): " + new A());
+    // In A constructor: x = 100
     // new A(): x = 100
 
     B b = new B();
