@@ -3,10 +3,12 @@
 class A:
     x: int = 100
     y: int = 200
-
-def oops():
-    A.x = 999999
-    A.y = 313
+    @classmethod
+    def oops(cls):
+        cls.x = 999999
+        cls.y = 313
+    def zero_x(self):
+        self.__class__.x = 0
 
 def reset():
     A.x = 100
@@ -31,15 +33,18 @@ if __name__ == '__main__':
     a1.y = -2
     display()
     # a1.x = -1, a1.y = -2
+    a1.zero_x()
+    display()
+    # a1.x = -1, a1.y = -2
     a2 = A()
     display()
     # a1.x = -1, a1.y = -2
-    # a2.x = 100, a2.y = 200
+    # a2.x = 0, a2.y = 200
     a2.y = 17
     display()
     # a1.x = -1, a1.y = -2
-    # a2.x = 100, a2.y = 17
-    oops()
+    # a2.x = 0, a2.y = 17
+    A.oops()
     a3 = A()
     display()
     # a1.x = -1, a1.y = -2
