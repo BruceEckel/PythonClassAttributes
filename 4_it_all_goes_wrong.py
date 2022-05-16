@@ -4,11 +4,11 @@ class A:
     x: int = 100
     y: int = 200
     @classmethod
-    def oops(cls):
-        cls.x = 999999
+    def change_x(cls):
+        cls.x = 999
+    @classmethod
+    def change_y(cls):
         cls.y = 313
-    def zero_x(self):
-        self.__class__.x = 0
 
 def reset():
     A.x = 100
@@ -18,7 +18,8 @@ if __name__ == '__main__':
     a1: A = None
     a2: A = None
     a3: A = None
-    def display():
+    def display(counter: int):
+        print(f"display({counter})")
         if a1:
             print(f"{a1.x = }, {a1.y = }")
         if a2:
@@ -27,31 +28,31 @@ if __name__ == '__main__':
             print(f"{a3.x = }, {a3.y = }")
 
     a1 = A()
-    display()
+    display(1)
     # a1.x = 100, a1.y = 200
     a1.x = -1
     a1.y = -2
-    display()
+    display(2)
     # a1.x = -1, a1.y = -2
-    a1.zero_x()
-    display()
+    a1.change_x()
+    display(3)
     # a1.x = -1, a1.y = -2
     a2 = A()
-    display()
+    display(4)
     # a1.x = -1, a1.y = -2
-    # a2.x = 0, a2.y = 200
+    # a2.x = 999, a2.y = 200
     a2.y = 17
-    display()
+    display(5)
     # a1.x = -1, a1.y = -2
-    # a2.x = 0, a2.y = 17
-    A.oops()
+    # a2.x = 999, a2.y = 17
+    A.change_y()
     a3 = A()
-    display()
+    display(6)
     # a1.x = -1, a1.y = -2
-    # a2.x = 999999, a2.y = 17
-    # a3.x = 999999, a3.y = 313
+    # a2.x = 999, a2.y = 17
+    # a3.x = 999, a3.y = 313
     reset()
-    display()
+    display(7)
     # a1.x = -1, a1.y = -2
     # a2.x = 100, a2.y = 17
     # a3.x = 100, a3.y = 200
