@@ -20,6 +20,6 @@ if __name__ == '__main__':
     a2 = A()
     show(a2, "a2")
     # [Class A] x: 100
-    # [Object a] Empty
+    # [Object a2] Empty
     print(f"{a2.x = }")
     # a2.x = 100
